@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "autoname": "format:Invoice-{#####}",
+ "creation": "2025-04-25 00:02:15.197670",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "document_details_break",
+  "file",
+  "document_id",
+  "process",
+  "column_break_optx",
+  "status",
+  "json_file",
+  "extraction_tab",
+  "extractor_section",
+  "data_map",
+  "start",
+  "invoice_details_section",
+  "invoice_number",
+  "invoice_date",
+  "invoice_total",
+  "customer_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "file",
+   "fieldtype": "Attach",
+   "label": "File"
+  },
+  {
+   "fieldname": "document_id",
+   "fieldtype": "Link",
+   "label": "Document ID",
+   "options": "Document"
+  },
+  {
+   "fieldname": "document_details_break",
+   "fieldtype": "Section Break",
+   "label": "Document Details"
+  },
+  {
+   "fieldname": "invoice_number",
+   "fieldtype": "Data",
+   "label": "Invoice Number"
+  },
+  {
+   "fieldname": "json_file",
+   "fieldtype": "Attach",
+   "label": "JSON"
+  },
+  {
+   "fieldname": "process",
+   "fieldtype": "Button",
+   "label": "Process"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Unprocessed\nProcessing\nProcessed\nFailed"
+  },
+  {
+   "fieldname": "column_break_optx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Data",
+   "label": "Invoice Date"
+  },
+  {
+   "fieldname": "invoice_total",
+   "fieldtype": "Data",
+   "label": "Invoice Total"
+  },
+  {
+   "fieldname": "extraction_tab",
+   "fieldtype": "Tab Break",
+   "label": "Extraction"
+  },
+  {
+   "fieldname": "invoice_details_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice Details"
+  },
+  {
+   "fieldname": "extractor_section",
+   "fieldtype": "Section Break",
+   "label": "Extractor"
+  },
+  {
+   "fieldname": "data_map",
+   "fieldtype": "Link",
+   "label": "Data Map",
+   "options": "Data Mapper"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Button",
+   "label": "Start"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-07 01:09:40.432241",
+ "modified_by": "Administrator",
+ "module": "Canopi Document Intelligence",
+ "name": "Invoice",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-25 14:33:39.048157",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "invoices"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoices",
+   "fieldtype": "Link",
+   "label": "Invoices",
+   "options": "Invoice"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-25 14:49:46.269477",
+ "modified_by": "Administrator",
+ "module": "Canopi Document Intelligence",
+ "name": "Invoice Multi-Select",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

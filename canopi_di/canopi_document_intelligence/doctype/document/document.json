@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "autoname": "format:Document-{#####}",
+ "creation": "2025-04-24 21:32:45.112550",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "add_document_section",
+  "file",
+  "document_type",
+  "split_mode",
+  "process",
+  "column_break_cfqh",
+  "status",
+  "response",
+  "invoices"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "default": "Invoice",
+   "description": "Choose a document type (e.g., invoice, bank statement).",
+   "fieldname": "document_type",
+   "fieldtype": "Select",
+   "label": "Document Type",
+   "options": "Invoice\nQuotation\nBank Statement\nBalance Sheet\nAadhaar Card\nPAN Card",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cfqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "add_document_section",
+   "fieldtype": "Section Break",
+   "label": "Add Document"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Unprocessed\nProcessing\nProcessed\nFailed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "process",
+   "fieldtype": "Button",
+   "label": "Process",
+   "width": "100"
+  },
+  {
+   "default": "0",
+   "description": "Enable this option if the uploaded file contains multiple documents that need to be extracted and processed separately",
+   "fieldname": "split_mode",
+   "fieldtype": "Check",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Split Mode"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "description": "Please upload the PDF file to be processed.",
+   "fieldname": "file",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "File",
+   "reqd": 1
+  },
+  {
+   "fieldname": "response",
+   "fieldtype": "Code",
+   "label": "Response",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "depends_on": "eval:doc.document_type===\"Invoice\";",
+   "fieldname": "invoices",
+   "fieldtype": "Table MultiSelect",
+   "label": "Invoices",
+   "options": "Invoice Multi-Select"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "max_attachments": 1,
+ "modified": "2025-04-25 16:20:20.929263",
+ "modified_by": "Administrator",
+ "module": "Canopi Document Intelligence",
+ "name": "Document",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
